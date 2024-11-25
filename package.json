@@ -1,0 +1,21 @@
+{
+  "name": "react_js",
+  "version": "1.0.0",
+  "description": "In this i learn the react",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "React_JS"
+  },
+  "keywords": [
+    "Rahul"
+  ],
+  "author": "Rahul Jangid",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.1"
+  }
+}
