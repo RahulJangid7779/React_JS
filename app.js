@@ -916,6 +916,7 @@ const reslist = [
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+  const { name, cuisines, rating } = resData?.card;
   return (
     <div className="res-card">
       <img
@@ -925,10 +926,10 @@ const RestaurantCard = (props) => {
           resData.cloudinaryImageId
         }
       />
-      <h3>{resData.card.name}</h3>
-      <h6>{resData.card.cuisines}</h6>
-      <h6>{resData.card.rating}</h6>
-      <h6>{resData.card.avgRating} </h6>
+      <h3>{name}</h3>
+      <h6>{cuisines}</h6>
+      <h6>{rating}</h6>
+      <h6>{avgRating} </h6>
     </div>
   );
 };
