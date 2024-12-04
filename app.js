@@ -916,20 +916,18 @@ const reslist = [
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, rating } = resData?.card;
+  const { name, cuisines, rating } = resData?.card.card.info;
   return (
     <div className="res-card">
       <img
         className="res-img"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          resData.cloudinaryImageId
+          resData.card.card.info.cloudinaryImageId
         }
       />
       <h3>{name}</h3>
       <h6>{cuisines}</h6>
-      <h6>{rating}</h6>
-      <h6>{avgRating} </h6>
     </div>
   );
 };
