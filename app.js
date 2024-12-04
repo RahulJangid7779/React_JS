@@ -916,7 +916,7 @@ const reslist = [
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, rating } = resData?.card.card.info;
+  const { name, cuisines } = resData?.card.card.info;
   return (
     <div className="res-card">
       <img
@@ -937,9 +937,9 @@ const Body = () => {
     <div className="body">
       <div className="search">search</div>
       <div className="res-container">
-        <RestaurantCard resData={reslist[0]} />
-        <RestaurantCard resData={reslist[1]} />
-        <RestaurantCard resData={reslist[2]} />
+        {reslist.map((info) => (
+          <RestaurantCard key={info.id} resData={info} />
+        ))}
       </div>
     </div>
   );
